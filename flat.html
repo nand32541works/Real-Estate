@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar nav-1">
+      <section class="flex">
+        <a href="home.html" class="logo"><i class="fas fa-house"></i>Real-Estate</a>
+        <ul>
+          <li><a href="#">post property<i class="fas fa-paper-plane"></i></a></li>
+        </ul>
+      </section>
+    </nav>
+    <nav class="navbar nav-2">
+      <section class="flex">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">buy<i class="fas fa-angle-down"></i></a>
+              <ul>
+                <li><a href="home1.html">House</a></li>
+                <li><a href="flat.html">Flat</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="warehouse.html">Warehouse</a></li>
+              </ul>
+            </li>
+            <li><a href="#">sell<i class="fas fa-angle-down"></i></a>
+              <ul>
+                <li><a href="post.html">Post property</a></li>
+                <li><a href="dash.html">Dashboard</a></li>
+              </ul>
+            </li>
+            <li><a href="#">help<i class="fas fa-angle-down"></i></a>
+              <ul>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <ul>
+          <li><a href="#">saved <i class="far fa-heart"></i></a></li>
+          <li><a href="#">account <i class="fas fa-angle-down"></i></a>
+            <ul>
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="login.html" onclick="signOut()">Sign Out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </nav>
+  </header>
+
+    <section class="flats">
+        <h1 class="heading">Popular Flats for Sale</h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="image/flat-1.png" alt="Flat 1">
+                <h3>2 BHK Apartment</h3>
+                <p>Location: New Town, Kolkata</p>
+                <p class="price">₹55,00,000</p>
+                <div class="btn-row">
+                  <a href="home1.html" class="btn left">View Details</a>
+                  <a href="contact.html" class="btn right">Contact Seller</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/flat-2.png" alt="Flat 2">
+                <h3>3 BHK Premium Flat</h3>
+                <p>Location: Ballygunge, Kolkata</p>
+                <p class="price">₹85,00,000</p>
+                <div class="btn-row">
+                  <a href="home1.html" class="btn left">View Details</a>
+                  <a href="contact.html" class="btn right">Contact Seller</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/flat-3.png" alt="Flat 3">
+                <h3>1 BHK Compact Studio</h3>
+                <p>Location: Park Circus, Kolkata</p>
+                <p class="price">₹35,00,000</p>
+                <div class="btn-row">
+                  <a href="home1.html" class="btn left">View Details</a>
+                  <a href="contact.html" class="btn right">Contact Seller</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/flat-4.png" alt="Flat 4">
+                <h3>2 BHK Cozy Flat</h3>
+                <p>Location: Salt Lake, Kolkata</p>
+                <p class="price">₹60,00,000</p>
+                <div class="btn-row">
+                  <a href="home1.html" class="btn left">View Details</a>
+                  <a href="contact.html" class="btn right">Contact Seller</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/flat-5.png" alt="Flat 5">
+                <h3>4 BHK Penthouse</h3>
+                <p>Location: Alipore, Kolkata</p>
+                <p class="price">₹1,75,00,000</p>
+                <div class="btn-row">
+                  <a href="home1.html" class="btn left">View Details</a>
+                  <a href="contact.html" class="btn right">Contact Seller</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/flat-6.png" alt="Flat 6">
+                <h3>3 BHK Family Flat</h3>
+                <p>Location: Dum Dum, Kolkata</p>
+                <p class="price">₹70,00,000</p>
+                <div class="btn-row">
+                  <a href="home1.html" class="btn left">View Details</a>
+                  <a href="contact.html" class="btn right">Contact Seller</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/flat-7.png" alt="Flat 7">
+                <h3>2 BHK Corner Flat</h3>
+                <p>Location: Tollygunge, Kolkata</p>
+                <p class="price">₹58,00,000</p>
+                <div class="btn-row">
+                  <a href="home1.html" class="btn left">View Details</a>
+                  <a href="contact.html" class="btn right">Contact Seller</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/flat-8.png" alt="Flat 8">
+                <h3>Studio Apartment</h3>
+                <p>Location: Park Street, Kolkata</p>
+                <p class="price">₹38,00,000</p>
+                <div class="btn-row">
+                  <a href="home1.html" class="btn left">View Details</a>
+                  <a href="contact.html" class="btn right">Contact Seller</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/flat-9.png" alt="Flat 9">
+                <h3>3 BHK Elegant Flat</h3>
+                <p>Location: Rajarhat, Kolkata</p>
+                <p class="price">₹77,00,000</p>
+                <div class="btn-row">
+                  <a href="home1.html" class="btn left">View Details</a>
+                  <a href="contact.html" class="btn right">Contact Seller</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/flat-10.png" alt="Flat 10">
+                <h3>1 BHK Budget Flat</h3>
+                <p>Location: Howrah, Kolkata</p>
+                <p class="price">₹30,00,000</p>
+                <div class="btn-row">
+                  <a href="home1.html" class="btn left">View Details</a>
+                  <a href="contact.html" class="btn right">Contact Seller</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/flat-11.png" alt="Flat 11">
+                <h3>3 BHK Riverside Flat</h3>
+                <p>Location: Garia, Kolkata</p>
+                <p class="price">₹68,00,000</p>
+                <div class="btn-row">
+                  <a href="home1.html" class="btn left">View Details</a>
+                  <a href="contact.html" class="btn right">Contact Seller</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="image/flat-12.png" alt="Flat 12">
+                <h3>2 BHK Modern Apartment</h3>
+                <p>Location: Barasat, Kolkata</p>
+                <p class="price">₹52,00,000</p>
+                <div class="btn-row">
+                  <a href="home1.html" class="btn left">View Details</a>
+                  <a href="contact.html" class="btn right">Contact Seller</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col" id="company">
+          <a href="home.html" class="logo"><i class="fas fa-house"></i>Real-Estate</a>
+          <br><br>
+          <p>We are specialized in designings, make your business as our life. Try our premium services.</p>
+          <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col" id="services">
+          <h3>Services</h3>
+          <div class="links">
+            <a href="#">Illustration</a>
+            <a href="#">Creatives</a>
+            <a href="#">Poster Design</a>
+            <a href="#">House Design</a>
+          </div>
+        </div>
+        <div class="col" id="useful-links">
+          <h3>Links</h3>
+          <div class="links">
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="#">Our Policy</a>
+            <a href="#">Help</a>
+          </div>
+        </div>
+        <div class="col" id="contact">
+          <h3>Contact</h3>
+          <div class="contact-details">
+            <i class="fa fa-location"></i>
+            <p style="color: #06d6f1;">Falguni Appartment, Barrackpore, Barasat Road<br> KOL, IND</p>
+          </div>
+          <br>
+          <div class="contact-details">
+            <i class="fa fa-phone"></i>
+            <p>+91-8100402401</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar nav-1">
+      <section class="flex">
+        <a href="home.html" class="logo"><i class="fas fa-house"></i>Real-Estate</a>
+        <ul>
+          <li><a href="#">post property<i class="fas fa-paper-plane"></i></a></li>
+        </ul>
+      </section>
+    </nav>
+    <nav class="navbar nav-2">
+      <section class="flex">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">buy<i class="fas fa-angle-down"></i></a>
+              <ul>
+                <li><a href="home1.html">House</a></li>
+                <li><a href="flat.html">Flat</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="warehouse.html">Warehouse</a></li>
+              </ul>
+            </li>
+            <li><a href="#">sell<i class="fas fa-angle-down"></i></a>
+              <ul>
+                <li><a href="post.html">Post property</a></li>
+                <li><a href="dash.html">Dashboard</a></li>
+              </ul>
+            </li>
+            <li><a href="#">help<i class="fas fa-angle-down"></i></a>
+              <ul>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <ul>
+          <li><a href="#">saved <i class="far fa-heart"></i></a></li>
+          <li><a href="#">account <i class="fas fa-angle-down"></i></a>
+            <ul>
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="login.html" onclick="signOut()">Sign Out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </nav>
+  </header>
+
+    <section class="contact">
+     <div class="row">
+      <div class="image">
+         <img src="image/contact-img.svg" alt="">
+      </div>
+      <form action="" method="post">
+         <h3>Get in Touch</h3>
+         <input type="text" name="name" required maxlength="50" placeholder="enter your name" class="box">
+         <input type="email" name="email" required maxlength="50" placeholder="enter your email" class="box">
+         <input type="number" name="number" required maxlength="10" max="9999999999" min="0" placeholder="enter your number" class="box">
+         <textarea name="message" placeholder="enter your message" required maxlength="1000" cols="30" rows="10" class="box"></textarea>
+         <input type="submit" value="send message" name="send" class="btn">
+      </form>
+     </div>
+    </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col" id="company">
+          <a href="home.html" class="logo"><i class="fas fa-house"></i>Real-Estate</a>
+          <br><br>
+          <p>We are specialized in designings, make your business as our life. Try our premium services.</p>
+          <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col" id="services">
+          <h3>Services</h3>
+          <div class="links">
+            <a href="#">Illustration</a>
+            <a href="#">Creatives</a>
+            <a href="#">Poster Design</a>
+            <a href="#">House Design</a>
+          </div>
+        </div>
+        <div class="col" id="useful-links">
+          <h3>Links</h3>
+          <div class="links">
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="#">Our Policy</a>
+            <a href="#">Help</a>
+          </div>
+        </div>
+        <div class="col" id="contact">
+          <h3>Contact</h3>
+          <div class="contact-details">
+            <i class="fa fa-location"></i>
+            <p style="color: #06d6f1;">Falguni Appartment, Barrackpore, Barasat Road<br> KOL, IND</p>
+          </div>
+          <br>
+          <div class="contact-details">
+            <i class="fa fa-phone"></i>
+            <p>+91-8100402401</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

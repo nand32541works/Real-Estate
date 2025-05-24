@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style8.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar nav-1">
+      <section class="flex">
+        <a href="home.html" class="logo"><i class="fas fa-house"></i>Real-Estate</a>
+        <ul>
+          <li><a href="#">post property<i class="fas fa-paper-plane"></i></a></li>
+        </ul>
+      </section>
+    </nav>
+    <nav class="navbar nav-2">
+      <section class="flex">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">buy<i class="fas fa-angle-down"></i></a>
+              <ul>
+                <li><a href="home1.html">House</a></li>
+                <li><a href="flat.html">Flat</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="warehouse.html">Warehouse</a></li>
+              </ul>
+            </li>
+            <li><a href="#">sell<i class="fas fa-angle-down"></i></a>
+              <ul>
+                <li><a href="post.html">Post property</a></li>
+                <li><a href="dash.html">Dashboard</a></li>
+              </ul>
+            </li>
+            <li><a href="rent.html">buy<i class="fas fa-angle-down"></i></a>
+              <ul>
+                <li><a href="home1.html">House</a></li>
+                <li><a href="flat.html">Flat</a></li>
+                <li><a href="shop.html">Shop</a></li>
+              </ul>
+            </li>
+            <li><a href="#">help<i class="fas fa-angle-down"></i></a>
+              <ul>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <ul>
+          <li><a href="#">saved <i class="far fa-heart"></i></a></li>
+          <li><a href="#">account <i class="fas fa-angle-down"></i></a>
+            <ul>
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="login.html" onclick="signOut()">Sign Out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </nav>
+  </header>
+
+  <section class="form-section">
+    <div class="form-container">
+      <h2>Property Details</h2>
+      <br>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <label for="title" style="color: rgb(0, 0, 0); text-align: justify;">Property Title</label>
+        <input type="text" id="title" name="title" placeholder="e.g. 2BHK Luxury Apartment" required>
+        <label for="type" style="color: rgb(0, 0, 0); text-align: justify;">Property Type</label>
+        <select id="type" name="type" required>
+          <option value="" style="color: rgb(0, 0, 0); text-align: justify;">Select Type</option>
+          <option value="house">House</option>
+          <option value="flat">Flat</option>
+          <option value="shop">Shop</option>
+          <option value="warehouse">Warehouse</option>
+          <option value="commercial">Commercial</option>
+        </select>
+        <div class="form-group">
+          <div>
+            <label for="price" style="color: rgb(0, 0, 0); text-align: justify;">Price (₹)</label>
+            <input type="number" id="price" name="price" placeholder="Enter price" required>
+          </div>
+          <div>
+            <label for="area" style="color: rgb(0, 0, 0); text-align: justify;">Area (sq.ft)</label>
+            <input type="number" id="area" name="area" placeholder="e.g. 1200" required>
+          </div>
+        </div>
+        <label for="address" style="color: rgb(0, 0, 0); text-align: justify;">Property Address</label>
+        <textarea id="address" name="address" rows="3" placeholder="Full address" required></textarea>
+        <label for="description" style="color: rgb(0, 0, 0); text-align: justify;">Property Description</label>
+        <textarea id="description" name="description" rows="4" placeholder="Describe your property here" required></textarea>
+        <label for="images" style="color: rgb(0, 0, 0); text-align: justify;">Upload Property Images</label>
+        <input type="file" id="images" name="images" accept="image/*" multiple required>
+        <br>
+        <br>
+        <button type="submit">Post Property</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col" id="company">
+          <a href="index.html" class="logo"><i class="fas fa-house"></i>Real-Estate</a>
+          <br><br>
+          <p>We are specialized in designings, make your business as our life. Try our premium services.</p>
+          <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col" id="services">
+          <h3>Services</h3>
+          <div class="links">
+            <a href="#">Illustration</a>
+            <a href="#">Creatives</a>
+            <a href="#">Poster Design</a>
+            <a href="#">House Design</a>
+          </div>
+        </div>
+        <div class="col" id="useful-links">
+          <h3>Links</h3>
+          <div class="links">
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="#">Our Policy</a>
+            <a href="#">Help</a>
+          </div>
+        </div>
+        <div class="col" id="contact">
+          <h3>Contact</h3>
+          <div class="contact-details">
+            <i class="fa fa-location"></i>
+            <p style="color: #06d6f1;">Falguni Appartment, Barrackpore, Barasat Road<br> KOL, IND</p>
+          </div>
+          <br>
+          <div class="contact-details">
+            <i class="fa fa-phone"></i>
+            <p>+91-8100402401</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const loggedInUser = localStorage.getItem("loggedInUser");
+      if (loggedInUser) {
+        const accountMenu = document.querySelector(".nav-2 .flex > ul > li:nth-child(2) > a");
+        accountMenu.innerHTML = `${loggedInUser} <i class="fas fa-angle-down"></i>`;
+        document.getElementById("signout-option").style.display = "block";
+      }
+    });
+    function signOut() {
+      localStorage.removeItem("loggedInUser");
+      alert("You have been signed out.");
+      window.location.reload();  
+    }
+  </script>
+</body>
+</html>

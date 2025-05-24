@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="style6.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --main-color: #06d6f1;
+      --light-color: #555;
+      --white: #fff;
+      --bg: #f2f2f2;
+      --dark: #333;
+      --border-radius: 8px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image/home-back.jpg');
+      color: var(--dark);
+    }
+
+    .dashboard {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 1rem;
+    }
+
+    .dashboard h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--main-color);
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    canvas {
+      max-width: 100%;
+      margin: 1rem 0;
+    }
+
+    .btn {
+      padding: 0.8rem 1.5rem;
+      background: var(--main-color);
+      color: var(--white);
+      border: none;
+      border-radius: var(--border-radius);
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .btn:hover {
+      background: var(--dark);
+    }
+
+    @media (max-width: 768px) {
+      .dashboard h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar nav-1">
+      <section class="flex">
+        <a href="home.html" class="logo"><i class="fas fa-house"></i>Real-Estate</a>
+        <ul>
+          <li><a href="#">post property<i class="fas fa-paper-plane"></i></a></li>
+        </ul>
+      </section>
+    </nav>
+    <nav class="navbar nav-2">
+      <section class="flex">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">buy<i class="fas fa-angle-down"></i></a>
+              <ul>
+                <li><a href="home1.html">House</a></li>
+                <li><a href="flat.html">Flat</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="warehouse.html">Warehouse</a></li>
+              </ul>
+            </li>
+            <li><a href="#">sell<i class="fas fa-angle-down"></i></a>
+              <ul>
+                <li><a href="post.html">Post property</a></li>
+                <li><a href="dash.html">Dashboard</a></li>
+              </ul>
+            </li>
+            <li><a href="rent.html">buy<i class="fas fa-angle-down"></i></a>
+              <ul>
+                <li><a href="home1.html">House</a></li>
+                <li><a href="flat.html">Flat</a></li>
+                <li><a href="shop.html">Shop</a></li>
+              </ul>
+            </li>
+            <li><a href="#">help<i class="fas fa-angle-down"></i></a>
+              <ul>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <ul>
+          <li><a href="#">saved <i class="far fa-heart"></i></a></li>
+          <li><a href="#">account <i class="fas fa-angle-down"></i></a>
+            <ul>
+              <li><a href="profile.html">Profile</a></li>
+              <li><a href="login.html" onclick="signOut()">Sign Out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </nav>
+  </header>
+
+  <div class="dashboard">
+    <h1 style="color: white;">🏠 Real Estate User Dashboard</h1>
+    <div class="cards">
+        <div class="card">
+            <h2>Data Rating</h2>
+            <p>Overview of user data ratings for properties</p>
+            <canvas id="ratingChart"></canvas>
+            <button class="btn">View Details</button>
+        </div>
+        <div class="card">
+            <h2>Process Analysis</h2>
+            <p>Status of Real Estate Process List</p>
+            <canvas id="processChart"></canvas>
+            <button class="btn">Track Process</button>
+        </div>
+        <div class="card">
+            <h2>Viewer Record</h2>
+            <p>Overview of user data ratings for properties</p>
+            <canvas id="viewerRecordChart"></canvas>
+            <button class="btn">View Details</button>
+        </div>
+        <div class="card">
+            <h2>Post Analysis</h2>
+            <p>Status of Real Estate Process List</p>
+            <canvas id="postAnalysisChart"></canvas>
+            <button class="btn">Track Process</button>
+        </div>
+        <div class="card">
+            <h2>Seller Response</h2>
+            <p>Overview of user data ratings for properties</p>
+            <canvas id="sellerResponseChart"></canvas>
+            <button class="btn">View Details</button>
+        </div>
+        <div class="card">
+            <h2>Email and Contact Progress</h2>
+            <p>Status of Real Estate Process List</p>
+            <canvas id="emailContactChart"></canvas>
+            <button class="btn">Track Process</button>
+        </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col" id="company">
+          <a href="index.html" class="logo"><i class="fas fa-house"></i>Real-Estate</a>
+          <br><br>
+          <p>We are specialized in designings, make your business as our life. Try our premium services.</p>
+          <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col" id="services">
+          <h3>Services</h3>
+          <div class="links">
+            <a href="#">Illustration</a>
+            <a href="#">Creatives</a>
+            <a href="#">Poster Design</a>
+            <a href="#">House Design</a>
+          </div>
+        </div>
+        <div class="col" id="useful-links">
+          <h3>Links</h3>
+          <div class="links">
+            <a href="about.html">About</a>
+            <a href="service.html">Services</a>
+            <a href="#">Our Policy</a>
+            <a href="#">Help</a>
+          </div>
+        </div>
+        <div class="col" id="contact">
+          <h3>Contact</h3>
+          <div class="contact-details">
+            <i class="fa fa-location"></i>
+            <p style="color: #06d6f1;">Falguni Appartment, Barrackpore, Barasat Road<br> KOL, IND</p>
+          </div>
+          <br>
+          <div class="contact-details">
+            <i class="fa fa-phone"></i>
+            <p>+91-8100402401</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const ratingCtx = document.querySelectorAll('#ratingChart');
+    ratingCtx.forEach((canvas) => {
+        new Chart(canvas, {
+        type: 'doughnut',
+        data: {
+            labels: ['5★', '4★', '3★', '2★', '1★'],
+            datasets: [{
+            label: 'Process Status',
+            data: [45, 30, 15, 5, 2],
+            backgroundColor: ['#06d6f1', '#4ecdc4', '#ffcc29', '#ff6b6b', '#c44536']
+            }]
+        },
+        options: {
+            responsive: true,
+        }
+        });
+    });
+
+    const processCtx = document.querySelectorAll('#processChart');
+    processCtx.forEach((canvas) => {
+        new Chart(canvas, {
+        type: 'pie',
+        data: {
+            labels: ['Pending', 'Ongoing', 'Completed'],
+            datasets: [{
+            label: 'Process Status',
+            data: [30, 50, 20],
+            backgroundColor: ['#ffcc29', '#06d6f1', '#4ecdc4']
+            }]
+        },
+        options: {
+            responsive: true
+        }
+        });
+    });
+
+    const viewerRecordCtx = document.querySelector('#viewerRecordChart');
+    new Chart(viewerRecordCtx, {
+        type: 'pie',
+        data: {
+        labels: ['Active', 'Inactive', 'Pending'],
+        datasets: [{
+            label: 'Viewer Record Status',
+            data: [60, 25, 15],
+            backgroundColor: ['#ff6b6b', '#06d6f1', '#ffcc29']
+        }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+    const postAnalysisCtx = document.querySelector('#postAnalysisChart');
+    new Chart(postAnalysisCtx, {
+        type: 'doughnut',
+        data: {
+        labels: ['Accepted', 'Rejected', 'Pending'],
+        datasets: [{
+            label: 'Post Status',
+            data: [40, 35, 25],
+            backgroundColor: ['#ffcc29', '#ff6b6b', '#06d6f1']
+        }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+    const sellerResponseCtx = document.querySelector('#sellerResponseChart');
+    new Chart(sellerResponseCtx, {
+        type: 'pie',
+        data: {
+        labels: ['Positive', 'Negative', 'Neutral'],
+        datasets: [{
+            label: 'Seller Response Status',
+            data: [45, 35, 20],
+            backgroundColor: ['#06d6f1', '#ff6b6b', '#4ecdc4']
+        }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+    const emailContactCtx = document.querySelector('#emailContactChart');
+    new Chart(emailContactCtx, {
+        type: 'doughnut',
+        data: {
+        labels: ['Responded', 'Not Responded'],
+        datasets: [{
+            label: 'Email & Contact Progress',
+            data: [70, 30],
+            backgroundColor: ['#06d6f1', '#ff6b6b']
+        }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+  </script>
+</body>
+</html>
