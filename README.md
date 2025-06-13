@@ -1,3 +1,3 @@
 # Real-Estate
 
-![Screenshot (965)](https://github.com/user-attachments/assets/6c888a3c-42b2-464c-8e81-3451610f1c11)
+![Screenshot (965)](https://github.com/user-attachments/assets/57bb2e53-c6c9-4895-9d73-6d1fe40636e7)
